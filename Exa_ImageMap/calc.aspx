@@ -14,7 +14,7 @@
             <asp:CircleHotSpot NavigateUrl="~/Circle.aspx" Radius="50" X="267" Y="374" />
             <asp:RectangleHotSpot Bottom="100" Left="100" NavigateUrl="~/Rect.aspx" 
                 Right="500" Top="10" />
-            <asp:PolygonHotSpot Coordinates="15,20,220,150" />
+            <asp:PolygonHotSpot Coordinates="319,677, 410,525, 485,677" />
         </asp:ImageMap>
     
     </div>
