@@ -12,8 +12,8 @@ public partial class View_Stud : System.Web.UI.Page
        
         String output = "";
         output += "<br><h2>Student Details</h2>";
-        output += "<br>Studnet No :" + Request.Form["StudNo"];
-        output += "<br>Studnet Name :" + Request.Form["StudName"];
+        output += "<br>Student No :" + Request.Form["StudNo"];
+        output += "<br>Student Name :" + Request.Form["StudName"];
         output += "<br>Year :" + Request.Form["Year"];
         output += "<br>Age :" + Request.Form["age"];
         output += "<br>Email :" + Request.Form["email"];
