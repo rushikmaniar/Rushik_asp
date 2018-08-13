@@ -13,7 +13,40 @@ public partial class Empreg : System.Web.UI.Page
     {
         if (Request.QueryString["error"] != null)
         {
+
             Response.Write("<h1 style='color:red' align=center>" + Request.QueryString["error"] + "</h1>");
+            
+            //set previos values
+            if (Request.QueryString["empno"] != null)
+            {
+                empno.Text = Request.QueryString["empno"];
+            }
+            if (Request.QueryString["empname"] != null)
+            {
+                empname.Text = Request.QueryString["empname"];
+            }
+            if (Request.QueryString["gender"] != null)
+            {
+                if (Request.QueryString["gender"].ToString().Equals("Male"))
+                    Male.Checked = true;
+                else
+                {
+                    Female.Checked = true;
+                }
+            }
+            if (Request.QueryString["desig"] != null)
+            {
+                design.SelectedValue = Request.QueryString["desig"];
+            }
+            if (Request.QueryString["updateid"] != null)
+            {
+                updateID.Value = Request.QueryString["updateid"];
+            }
+            if (Request.QueryString["operation"] != null)
+            {
+                operation.Value = Request.QueryString["operation"];
+            }
+
         }
         SqlConnection cn;
         cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Admin\Documents\Visual Studio 2010\WebSites\Rushik_asp\CRUDDisConn\App_Data\Employee.mdf;Integrated Security=True;User Instance=True");

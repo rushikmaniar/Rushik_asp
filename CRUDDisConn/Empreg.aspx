@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    <h2 align="center">Edit Employee</h2>
+    <h2 align="center">ADD OR Edit Employee</h2>
         <table align="center" border="10" cellpadding="10" cellspacing="10">
             <tr>
                 <td>

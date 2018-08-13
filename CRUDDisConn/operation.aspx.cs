@@ -42,10 +42,12 @@ public partial class operation : System.Web.UI.Page
             SqlDataAdapter da = new SqlDataAdapter(selqry, cn);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            if (dt.Rows.Count > 0)
-                Response.Redirect("empreg.aspx?error=Record_Already_Exists");
+            if (dt.Rows.Count > 0){
+                Response.Redirect("empreg.aspx?error=Record_Already_Exists&empno=" + empno + "&empname=" + ename + "&gender=" + gender + "&desig=" + desig + "&updateid=" + updateid + "&operation=" + Request.Form["operation"]);
+            }
+                
             else { 
-            //fire insert query
+            //fire update query
                 String insqry = "UPDATE  emp SET empno="+empno+", ename='"+ename+"', gender='"+gender+"', desig='"+desig+"' WHERE empno="+updateid;
                 Response.Write(insqry);
                  da = new SqlDataAdapter(insqry, cn);
