@@ -23,17 +23,73 @@
         </table>
         <asp:MultiView ID="MultiView1" runat="server">
             <asp:View ID="View1" runat="server">
-                <asp:BulletedList ID="BulletedList1" runat="server" DisplayMode="HyperLink">
-                    
-                    <asp:ListItem Value="page.aspx?s=1">page1</asp:ListItem>
-                    <asp:ListItem Value="Page.aspx?s=2">Page2</asp:ListItem>
-                    <asp:ListItem Value="Page.aspx?s=3">Page3</asp:ListItem>
-                    
-                </asp:BulletedList>
+                <table border="3">
+            <tr>
+                <td rowspan="4">
+                    <asp:ListBox ID="ListBox1" runat="server" SelectionMode="Multiple" 
+                        Width="100px">
+                        <asp:ListItem>Rajkot</asp:ListItem>
+                        <asp:ListItem>Surat</asp:ListItem>
+                        <asp:ListItem>Baroda</asp:ListItem>
+                        <asp:ListItem>Jamnagar</asp:ListItem>
+                    </asp:ListBox>
+                </td>
+                <td>
+                    <asp:Button ID="cmd_1to2All" runat="server" Text=">>" 
+                        onclick="cmd_1to2All_Click" />
+                </td>
+                <td rowspan="4">
+                <asp:ListBox ID="ListBox2" runat="server" SelectionMode="Multiple" Width="100px"></asp:ListBox>
+                </td>
+            </tr>
+
+            <tr>
+               
+                <td>
+                    <asp:Button ID="cmd_1to2Sel" runat="server" Text=">|" 
+                        onclick="cmd_1to2Sel_Click" />
+                </td>
+                
+            </tr>
+            <tr>
+               
+                <td>
+                    <asp:Button ID="cmd_2to1Sel" runat="server" Text="|<" 
+                        onclick="cmd_2to1Sel_Click" />
+                </td>
+                
+            </tr>
+            <tr>
+                
+                <td>
+                    <asp:Button ID="cmd_2to1All" runat="server" Text="<<" 
+                        onclick="cmd_2to1All_Click" />
+                </td>
+                
+            </tr>
+        </table>
             </asp:View>
             <asp:View ID="View2" runat="server">
+                
+                <asp:DropDownList ID="SemDropDownList" runat="server" AutoPostBack="True" 
+                    onselectedindexchanged="SemDropDownList_SelectedIndexChanged">
+                    <asp:ListItem>FY</asp:ListItem>
+                    <asp:ListItem>SY</asp:ListItem>
+                    <asp:ListItem>TY</asp:ListItem>
+                </asp:DropDownList>
+                <asp:DropDownList ID="SubjectDropDownList" runat="server" AutoPostBack="True">
+                    <asp:ListItem>English</asp:ListItem>
+                    <asp:ListItem>C</asp:ListItem>
+                    <asp:ListItem>HTML</asp:ListItem>
+                </asp:DropDownList>
+                
             </asp:View>
             <asp:View ID="View3" runat="server">
+                <asp:BulletedList ID="BulletedList2" runat="server" DisplayMode="HyperLink">
+                    <asp:ListItem Value="page.aspx?class=FYBCA">FYBCA</asp:ListItem>
+                    <asp:ListItem Value="page.aspx?class=SYBCA">SYBCA</asp:ListItem>
+                    <asp:ListItem Value="page.aspx?class=TYBCA">TYBCA</asp:ListItem>
+                </asp:BulletedList>
             </asp:View>
         </asp:MultiView>
     </div>
