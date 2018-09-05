@@ -19,7 +19,15 @@ public partial class _Default : System.Web.UI.Page
             String opr = ViewState["opr"].ToString();
 
             int temp = int.Parse(ViewState["no1"].ToString());
-            int new_state = int.Parse(ansbox.Text);
+            int new_state = 0;
+            if (ansbox.Text != "")
+            {
+                new_state = int.Parse(ansbox.Text);
+            }
+            else
+            {
+                new_state = temp;
+            }
 
             if (opr == "+")
             {
@@ -73,8 +81,14 @@ public partial class _Default : System.Web.UI.Page
             String opr = ViewState["opr"].ToString();
 
             int temp = int.Parse(ViewState["no1"].ToString());
-            int new_state = int.Parse(ansbox.Text);
-
+            int new_state = 0;
+            if (ansbox.Text != "") {
+                new_state = int.Parse(ansbox.Text);
+            }
+            else
+            {
+                new_state = temp;
+            }
             if (opr == "+")
             {
                 //add
@@ -127,7 +141,15 @@ public partial class _Default : System.Web.UI.Page
             String opr = ViewState["opr"].ToString();
 
             int temp = int.Parse(ViewState["no1"].ToString());
-            int new_state = int.Parse(ansbox.Text);
+            int new_state = 0;
+            if (ansbox.Text != "")
+            {
+                new_state = int.Parse(ansbox.Text);
+            }
+            else
+            {
+                new_state = temp;
+            }
 
             if (opr == "+")
             {
@@ -181,7 +203,16 @@ public partial class _Default : System.Web.UI.Page
             String opr = ViewState["opr"].ToString();
 
             int temp = int.Parse(ViewState["no1"].ToString());
-            int new_state = int.Parse(ansbox.Text);
+
+            int new_state = 0;
+            if (ansbox.Text != "")
+            {
+                new_state = int.Parse(ansbox.Text);
+            }
+            else
+            {
+                new_state = temp;
+            }
 
             if (opr == "+")
             {
@@ -208,7 +239,7 @@ public partial class _Default : System.Web.UI.Page
                 else
                 {
                     //cannot divide by zero
-
+                    Response.Write("<h3 style='color:red'>Cannot Divide By Zero</style></h3>");
                 }
 
             }
@@ -239,8 +270,8 @@ public partial class _Default : System.Web.UI.Page
 
             //equal with operation
             
-            String opr = ViewState["no1"].ToString();
-            Response.Write("as : " + opr);
+            String opr = ViewState["opr"].ToString();
+            
             int temp = int.Parse(ViewState["no1"].ToString());
             int new_state = 0;
     
@@ -274,7 +305,7 @@ public partial class _Default : System.Web.UI.Page
                 else
                 {
                     //cannot divide by zero
-
+                    Response.Write("<h3 style='color:red'>Cannot Divide By Zero</style></h3>");
                 }
 
             }
@@ -283,7 +314,24 @@ public partial class _Default : System.Web.UI.Page
             
 
         }
+        ViewState["opr"] = "=";
         ansbox.Text = "";
         ansbox.Focus();
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (ViewState["opr"] != null) {
+            ViewState["opr"] = null;
+        }
+
+        if (ViewState["no1"] != null)
+        {
+            ViewState["no1"] = null;
+        }
+
+        ansbox.Text = "";
+        outputbox.Text = "";
+        Response.Redirect("Default.aspx");
     }
 }

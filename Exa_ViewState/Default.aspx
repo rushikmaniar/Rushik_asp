@@ -14,7 +14,9 @@
     <div>
         <table border="5" align="center">
             <tr>
-                <td colspan="4"><asp:TextBox ID="ansbox" runat="server"></asp:TextBox></td>
+                <td colspan="4"><asp:TextBox ID="ansbox" runat="server"></asp:TextBox>
+                    <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Reset" />
+                </td>
             </tr>
             <tr>
                 <td align="center"><asp:Button ID="cmdAdd" runat="server" Text="+" 
@@ -30,7 +32,7 @@
                 <td colspan="4" align="center"><asp:Button ID="cmdEqual" runat="server" Text="=" 
                         onclick="cmdEqual_Click" /></td>
             </tr>
-            <tr><td colspan="4" align="center"><asp:TextBox ID="outputbox" runat="server"></asp:TextBox></td></tr>
+            <tr><td>Answer</td><td colspan="3" align="center"><asp:TextBox ID="outputbox" runat="server"></asp:TextBox></td></tr>
         </table>
     </div>
     </form>
