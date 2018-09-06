@@ -11,7 +11,7 @@
     <div>
     <h2 align="center">ADD OR Edit Employee</h2>
         <table align="center" border="10" cellpadding="10" cellspacing="10">
-            <tr>
+            <tr>             
                 <td>
                     Emp No
                 </td>
@@ -27,7 +27,7 @@
                 <td>
                     <asp:TextBox ID="empname" runat="server"></asp:TextBox>
                 </td>
-            </tr>
+            </tr>                         
 
             <tr>
                 <td>

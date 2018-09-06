@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Data;
-using System.Data.SqlClient;
+using System.Data.SqlClient; 
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -11,8 +11,8 @@ public partial class ViewEmp : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-        SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Admin\Documents\Visual Studio 2010\WebSites\Rushik_asp\CRUDDisConn\App_Data\Employee.mdf;Integrated Security=True;User Instance=True");
+
+        SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Bca\sem5\ASP\Rushik_asp\CRUDDisConn\App_Data\Employee.mdf;Integrated Security=True;User Instance=True");
         String selqry = "SELECT * FROM emp";
         SqlDataAdapter da = new SqlDataAdapter(selqry, cn);
         DataTable dt = new DataTable();
@@ -26,7 +26,7 @@ public partial class ViewEmp : System.Web.UI.Page
         
         //Columns Heading
         for (int i = 0; i < dt.Columns.Count; i++)
-        {
+        { 
             output += "<th>"+dt.Columns[i]+"</th>";
         }
         output += "<th>Edit</th>";

@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+ 
 public partial class Empreg : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
@@ -49,7 +49,7 @@ public partial class Empreg : System.Web.UI.Page
 
         }
         SqlConnection cn;
-        cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Admin\Documents\Visual Studio 2010\WebSites\Rushik_asp\CRUDDisConn\App_Data\Employee.mdf;Integrated Security=True;User Instance=True");
+        cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Bca\sem5\ASP\Rushik_asp\CRUDDisConn\App_Data\Employee.mdf;Integrated Security=True;User Instance=True");
 
         //Fetch Designation
         String selqry;

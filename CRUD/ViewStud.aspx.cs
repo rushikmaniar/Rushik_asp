@@ -10,8 +10,8 @@ public partial class ViewStud : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
-        SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Admin\Documents\Visual Studio 2010\WebSites\Rushik_asp\CRUD\App_Data\Student.mdf;Integrated Security=True;User Instance=True");
+
+        SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Bca\sem5\ASP\Rushik_asp\CRUD\App_Data\Student.mdf;Integrated Security=True;User Instance=True");
         cn.Open();
         String selqry = "SELECT * FROM stud";
         if (Request.QueryString["s"] != null)
@@ -39,7 +39,7 @@ public partial class ViewStud : System.Web.UI.Page
         SqlCommand cmd = new SqlCommand(selqry, cn);
         SqlDataReader dr = cmd.ExecuteReader();
 
-        Response.Write("<table border=5 align=center height=250 witdth=1000>");
+        Response.Write("<table border=5 align=center height=250 width=1000>");
 
         Response.Write("<tr>");
         Response.Write("<th>" + "<a href=ViewStud.aspx?s=1>" + "Rollno" + "</a></th>");

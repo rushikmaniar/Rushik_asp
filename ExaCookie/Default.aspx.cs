@@ -15,8 +15,10 @@ public partial class _Default : System.Web.UI.Page
     {
         HttpCookie ck = new HttpCookie("uname");
         ck.Value = uname.Text;
-        ck.Expires = DateTime.Now + new TimeSpan(0, 0, 30);
+        
+        ck.Expires = DateTime.Now + new TimeSpan(0, 0,120);
         Response.Cookies.Add(ck);
         Response.Write("cookie Created");
+        
     }
 }

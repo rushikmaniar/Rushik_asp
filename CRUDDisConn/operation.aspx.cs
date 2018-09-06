@@ -12,7 +12,7 @@ public partial class operation : System.Web.UI.Page
     SqlConnection cn;
     protected void Page_Load(object sender, EventArgs e)
     {
-        cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Admin\Documents\Visual Studio 2010\WebSites\Rushik_asp\CRUDDisConn\App_Data\Employee.mdf;Integrated Security=True;User Instance=True");
+        cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Bca\sem5\ASP\Rushik_asp\CRUDDisConn\App_Data\Employee.mdf;Integrated Security=True;User Instance=True");
 
         if (Request.QueryString["del"] != null)
         {

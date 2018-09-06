@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class Studreg : System.Web.UI.Page
 {
-    public SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=C:\Users\Admin\Documents\Visual Studio 2010\WebSites\Rushik_asp\CRUD\App_Data\Student.mdf;Integrated Security=True;User Instance=True");
+    public SqlConnection cn = new SqlConnection(@"Data Source=.\SQLEXPRESS;AttachDbFilename=D:\Bca\sem5\ASP\Rushik_asp\CRUD\App_Data\Student.mdf;Integrated Security=True;User Instance=True");
     SqlCommand cmd;
     protected void Page_Load(object sender, EventArgs e)
     {

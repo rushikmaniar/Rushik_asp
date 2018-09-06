@@ -10,7 +10,7 @@ public partial class viewcookie : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         //HttpCookie ck = (HttpCookie)Request.Cookies["uname"];
-        HttpCookie ck = (HttpCookie)Request.Cookies[0];
+        HttpCookie ck = (HttpCookie)Request.Cookies["uname"];
         if (ck != null)
         {
             Response.Write("value : " + ck.Value);

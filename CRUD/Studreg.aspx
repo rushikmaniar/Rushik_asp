@@ -26,7 +26,7 @@
                 <td>
                     Name
                 </td>
-                <td>
+                  <td>
                     <asp:TextBox ID="Name" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredName" runat="server" 
                         ControlToValidate="Name" ErrorMessage="Name Required" ForeColor="Red"></asp:RequiredFieldValidator>
