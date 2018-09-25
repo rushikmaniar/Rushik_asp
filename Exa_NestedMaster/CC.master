@@ -1,0 +1,16 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="CC.master.cs" Inherits="CC" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="CC" Runat="Server">
+CHRIST COLLEGE
+<div>
+     <img src="img2.jpg" alt="CIM" />
+</div>
+<a href="Staff.aspx">Christ College Staff</a>
+<asp:ContentPlaceHolder ID="staff" runat="server"></asp:ContentPlaceHolder>
+<br /><br />
+<a href="CC_course.aspx">Christ College Courses</a>
+<asp:ContentPlaceHolder ID="course" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+
